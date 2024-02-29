@@ -1,1 +1,47 @@
-<p>tickets works!</p>
+
+@if (tickets$ | async; as ticket) {
+	<table>
+	  <thead>
+		<tr>
+		  <th>Ticket</th>
+		  <th>Issue</th>
+		  <th>OpenedBy</th>
+		  <th>Date</th>
+          <th>Status</th>
+          <th>ResolvedBy</th>
+          <th>Resolution</th>
+		</tr>
+	  </thead>
+	  <tbody>
+		@for (ticket of ticket; track ticket.Id) {
+		  <tr>
+			<td>{{ ticket.Ticket }}</td>
+			<td>{{ ticket.Issue }}</td>
+			<td>{{ ticket.OpenedBy }}</td>
+			<td>{{ ticket.Date }}</td>
+            <td>{{ ticket.Status }}</td>
+            <td>{{ ticket.ResolvedBy }}</td>
+            <td>{{ ticket.Resolution }}</td>
+			<td>
+				<!-- this component exist inside of a router outlet,
+				if you decide to use the routerLink directive, you will,
+				you will be default be using a subroute, ie, it will ALWAYS
+				include book/ first because THIS COMPONENT already 
+				exist inside of a router outlet -->
+				<button (click)="getTickets(ticket.Id)">Details</button>
+			</td>
+			<td>
+				<button (click)="updateTicket(ticket.Id, ticket)">✔</button>
+			</td>
+			<td>
+				<button (click)="deleteTicket(ticket.Id)">🗑️</button>
+			</td>
+		  </tr>
+		}
+	  </tbody>
+	</table>
+  } @else { 
+	<div>
+	  <h2>Loading tickets...</h2>
+	</div>
+  }
