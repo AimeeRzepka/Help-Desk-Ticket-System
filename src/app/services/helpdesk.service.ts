@@ -17,4 +17,14 @@ export class HelpDeskService {
     return this.httpClient.get<TicketModel[]>(this.baseUrl)
   }
 
+  updateTickets(updatedTicket: TicketModel, id: number | null) {
+    // httpClient.get means this method will be making an http GET request!
+    return this.httpClient.put(`${this.baseUrl}/${id}`, updatedTicket);
+  }
+
+  deleteTickets(id: number) {
+    // httpClient.get means this method will be making an http GET request!
+    return this.httpClient.delete<TicketModel[]>(this.baseUrl)
+  }
+
 }
