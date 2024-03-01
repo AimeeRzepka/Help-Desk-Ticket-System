@@ -1,5 +1,5 @@
 
-@if (tickets$ | async; as ticket) {
+@if (tickets$ | async; as tickets) {
 	<table>
 	  <thead>
 		<tr>
@@ -13,28 +13,30 @@
 		</tr>
 	  </thead>
 	  <tbody>
-		@for (ticket of ticket; track ticket.Id) {
+		@for (ticket of tickets; track ticket.id) {
 		  <tr>
-			<td>{{ ticket.Ticket }}</td>
-			<td>{{ ticket.Issue }}</td>
-			<td>{{ ticket.OpenedBy }}</td>
-			<td>{{ ticket.Date }}</td>
-            <td>{{ ticket.Status }}</td>
-            <td>{{ ticket.ResolvedBy }}</td>
-            <td>{{ ticket.Resolution }}</td>
+			<td>{{ ticket.id }}</td>
+			<td>{{ ticket.issue }}</td>
+			<td>{{ ticket.openedBy }}</td>
+			<td>{{ ticket.date }}</td>
+			<td>{{ ticket.status }}</td>
+			<td>{{ ticket.resolvedBy }}</td>
+			<td>{{ ticket.resolution }}</td>
+
+
 			<td>
 				<!-- this component exist inside of a router outlet,
 				if you decide to use the routerLink directive, you will,
 				you will be default be using a subroute, ie, it will ALWAYS
 				include book/ first because THIS COMPONENT already 
 				exist inside of a router outlet -->
-				<button (click)="getTickets(ticket.Id)">Details</button>
+				<button (click)="getTicket(ticket.id)">Details</button>
 			</td>
 			<td>
-				<button (click)="updateTicket(ticket.Id, ticket)">✔</button>
+				<button (click)="updateTicket(ticket.id, ticket)">✔</button>
 			</td>
 			<td>
-				<button (click)="deleteTicket(ticket.Id)">🗑️</button>
+				<button (click)="deleteTicket(ticket.id)">🗑️</button>
 			</td>
 		  </tr>
 		}

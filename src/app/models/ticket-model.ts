@@ -1,12 +1,12 @@
 export interface TicketModel {
-  Id: number,
-  Ticket: number,
-  Issue: string,
-  OpenedBy: string,
-  Date: Date,
-  Status: boolean,
-  ResolvedBy: string,
-  Resolution: string
+  id: number,
+  ticket: number,
+  issue: string,
+  openedBy: string,
+  date: Date,
+  status: boolean,
+  resolvedBy: string,
+  resolution: string
 }
 
 export interface BookmarkedTicketModel {

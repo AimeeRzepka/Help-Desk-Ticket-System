@@ -20,7 +20,7 @@ export class TicketsComponent {
 
   tickets$ = this.helpDeskService.getTickets();
 
-  getTickets(id: number) {
+  getTicket(id: number) {
     this.router.navigate(['ticket', id]);
   }
 
