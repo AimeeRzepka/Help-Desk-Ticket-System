@@ -9,11 +9,21 @@ export interface TicketModel {
   resolution: string
 }
 
+export interface PostTicketModel {
+  ticket: number,
+  issue: string,
+  openedBy: string,
+  date: Date,
+  status: boolean,
+  resolvedBy: string,
+  resolution: string
+}
+
 export interface BookmarkedTicketModel {
-    Id: number,
-    Ticket: number,
-    BookMarkedBy: string,
-    BookmarkedDate: Date,
+    id: number,
+    ticket: number,
+    bookMarkedBy: string,
+    bookmarkedDate: Date,
 }
 
 

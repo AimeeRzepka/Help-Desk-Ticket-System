@@ -1,7 +1,8 @@
 import { Injectable } from '@angular/core';
 import { environment } from '../../environments/environment.development';
 import { HttpClient } from '@angular/common/http';
-import { TicketModel } from '../models/ticket-model';
+import { PostTicketModel, TicketModel } from '../models/ticket-model';
+import { Observable } from 'rxjs';
 
 @Injectable({
   providedIn: 'root'
@@ -24,7 +25,11 @@ export class HelpDeskService {
 
   deleteTickets(id: number) {
     // httpClient.get means this method will be making an http GET request!
-    return this.httpClient.delete<TicketModel[]>(this.baseUrl)
+    return this.httpClient.delete(`${this.baseUrl}/${id}`)
+  }
+
+  addTicket(newTicket: PostTicketModel): Observable<TicketModel> {
+    return this.httpClient.post<TicketModel>(this.baseUrl, newTicket);
   }
 
 }

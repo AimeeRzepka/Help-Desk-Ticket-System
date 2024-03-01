@@ -1,0 +1,34 @@
+<form (ngSubmit)="handleTicketSubmit()">
+    <div class="form-group">
+		<label for="title">Ticket</label>
+		<input type="number" id="ticket" [(ngModel)]="ticket" name="ticket" required>
+	</div>
+    <div class="form-group">
+		<label for="title">Issue</label>
+		<input type="text" id="issue" [(ngModel)]="issue" name="issue" required>
+	</div>
+    <div class="form-group">
+		<label for="title">Opened by</label>
+		<input type="text" id="obendedBy" [(ngModel)]="openedBy" name="obendedBy" required>
+	</div>
+    <div class="form-group">
+        <label for="title">Date</label>
+        <input type="date" id="date" [(ngModel)]="date" name="date" required>
+    </div>
+    <div class="form-group">
+        <label for="title">Status</label>
+        <input type="text" id="status" [(ngModel)]="status" name="status" required>
+    </div>
+    <div class="form-group">
+        <label for="title">Resolved by</label>
+        <input type="text" id="resolvedBy" [(ngModel)]="resolvedBy" name="resolvedBy" required>
+    </div>
+    <div class="form-group">
+        <label for="title">Resolution</label>
+        <input type="text" id="resolution" [(ngModel)]="resolution" name="resolution" required>
+    </div>
+    
+
+    <button type="submit">Add Ticket</button>
+
+</form>
