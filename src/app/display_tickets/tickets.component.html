@@ -1,3 +1,4 @@
+<a [routerLink]="'/add-ticket'">ADD TICKET</a>
 
 @if (tickets$ | async; as tickets) {
 	<table>
@@ -33,7 +34,7 @@
 				<button (click)="getTicket(ticket.id)">Details</button>
 			</td>
 			<td>
-				<button (click)="updateTicket(ticket.id, ticket)">✔</button>
+				<button (click)="updateTicket(ticket.id, ticket)">Update Ticket</button>
 			</td>
 			<td>
 				<button (click)="deleteTicket(ticket.id)">🗑️</button>
