@@ -1,7 +1,7 @@
 import { Injectable } from '@angular/core';
 import { environment } from '../../environments/environment.development';
 import { HttpClient } from '@angular/common/http';
-import { PostTicketModel, TicketModel } from '../models/ticket-model';
+import { BookmarkedTicketModel, PostTicketModel, TicketModel } from '../models/ticket-model';
 import { Observable } from 'rxjs';
 
 @Injectable({
@@ -12,6 +12,7 @@ export class HelpDeskService {
   constructor(private httpClient: HttpClient) { }
 
   baseUrl = `${environment.apiDomain}/api/HelpDesk`;
+  
 
   getTickets() {
     // httpClient.get means this method will be making an http GET request!
@@ -31,5 +32,7 @@ export class HelpDeskService {
   addTicket(newTicket: PostTicketModel): Observable<TicketModel> {
     return this.httpClient.post<TicketModel>(this.baseUrl, newTicket);
   }
+
+
 
 }

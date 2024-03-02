@@ -1,1 +1,25 @@
-<p>bookmarks works!</p>
+@if (bookmarks$ | async; as bookmarks) {
+	<table>
+	  <thead>
+		<tr>
+		  <th>Ticket ID</th>
+		  <th>User</th>
+		  <th>Bookmarked By</th>
+		</tr>
+	  </thead>
+	  <tbody>
+		@for (bookmark of bookmarks; track bookmark.id) {
+		  <tr>
+			<td>{{ bookmark.ticketId }}</td>
+			<td>{{ bookmark.markedBy }}</td>
+			<td>{{ bookmark.markedDate }}</td>
+		  </tr>
+		}
+	  </tbody>
+	</table>
+  } @else { 
+	<div>
+	  <h2>Loading bookmarks...</h2>
+	</div>
+  }
+

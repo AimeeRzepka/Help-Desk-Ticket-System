@@ -1,9 +1,10 @@
 import { Component } from '@angular/core';
 import { HelpDeskService } from '../services/helpdesk.service';
+import { BookmarksService } from '../services/bookmarks.service';
 import { CommonModule } from '@angular/common';
 import { Router, RouterModule } from '@angular/router';
 import { HttpClient } from '@angular/common/http';
-import { TicketModel } from '../models/ticket-model';
+import { TicketModel, BookmarkedTicketModel } from '../models/ticket-model';
 
 @Component({
   selector: 'app-tickets',
@@ -16,6 +17,7 @@ export class TicketsComponent {
   
   constructor(
     private helpDeskService: HelpDeskService,
+    private bookmarkService: BookmarksService,
     private router: Router) { }
 
   tickets$ = this.helpDeskService.getTickets();
@@ -34,5 +36,21 @@ export class TicketsComponent {
   updateTicket(id: number, ticket: TicketModel) {
     this.router.navigate(['update-ticket', id], { queryParams: ticket });
   }
+  
+  addBookmark(id: number, user: string) {
+    console.log(id);
+    const bookmarkModel = {
+      ticketId: +id,
+      markedBy: user,
+      markedDate: new Date(),
+    };
+    console.log(bookmarkModel)
+
+    this.bookmarkService.addBookmark(bookmarkModel).subscribe(() => {
+      console.log('made it here')
+      this.router.navigate(['bookmarks']);
+    })
+  }
+  
 
 }
