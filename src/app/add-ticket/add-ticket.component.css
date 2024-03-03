@@ -1,0 +1,36 @@
+button {
+    padding-left: 1rem;
+    padding-right: 1rem;
+    padding-top: 0.5rem;
+    padding-bottom: 0.5rem;
+    border-radius: 0.25rem;
+    background-color: #c355f5;
+    cursor: pointer;
+    font-family: 'Courier New', Courier, monospace;
+
+    
+  }
+
+  :host {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: left;
+    height: 100%;
+    width: 100%;
+    background-color: #3d3551;
+    font-family: "Courier New", monospace;
+    color:#3d3551;
+    font-size: 1rem;
+    line-height: 2.5;
+    padding: 1rem
+    
+  }
+
+  form {
+    background-color: #c355f5;
+    padding-left: 20rem;
+    padding-right: 20rem;
+    
+    
+  }
