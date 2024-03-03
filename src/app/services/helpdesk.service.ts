@@ -33,6 +33,8 @@ export class HelpDeskService {
     return this.httpClient.post<TicketModel>(this.baseUrl, newTicket);
   }
 
-
+  getTicket(id: number): Observable<TicketModel> {
+    return this.httpClient.get<TicketModel>(`${this.baseUrl}/${id}`);
+  }
 
 }

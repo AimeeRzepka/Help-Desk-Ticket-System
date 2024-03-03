@@ -36,6 +36,10 @@ export class TicketsComponent {
   updateTicket(id: number, ticket: TicketModel) {
     this.router.navigate(['update-ticket', id], { queryParams: ticket });
   }
+
+  routeToTicket(id: number) {
+    this.router.navigate(['ticket', id]);
+  }
   
   addBookmark(id: number, user: string) {
     console.log(id);
