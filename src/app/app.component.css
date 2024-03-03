@@ -1,0 +1,11 @@
+nav {
+    padding-left: 1rem;
+    display: flex;
+    gap: 1rem;
+  }
+  
+  a {
+    cursor: pointer;
+    text-decoration: underline;
+  }
+  

@@ -21,9 +21,15 @@ export interface PostTicketModel {
 
 export interface BookmarkedTicketModel {
     id: number,
-    ticket: number,
-    bookMarkedBy: string,
-    bookmarkedDate: Date,
+    ticketId: number,
+    markedBy: string,
+    markedDate: Date,
+}   
+
+export interface PostBookmarkedTicketModel {
+  ticketId: number,
+  markedBy: string,
+  markedDate: Date, 
 }
 
 

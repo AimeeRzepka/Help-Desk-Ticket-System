@@ -1,12 +1,20 @@
 import { Component } from '@angular/core';
+import { BookmarksService } from '../services/bookmarks.service';
+import { CommonModule } from '@angular/common';
 
 @Component({
   selector: 'app-bookmarks',
   standalone: true,
-  imports: [],
+  imports: [CommonModule],
   templateUrl: './bookmarks.component.html',
   styleUrl: './bookmarks.component.css'
 })
-export class BookmarksComponent {
 
+export class BookmarksComponent {
+  
+  constructor(
+    private bookmarkService: BookmarksService) { }
+
+  bookmarks$ = this.bookmarkService.getBookmarks();
+  
 }
