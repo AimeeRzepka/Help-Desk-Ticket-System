@@ -1,0 +1,16 @@
+@if (ticket !== null) {
+	<div>
+        <p>{{ ticket.id }}</p>
+        <p>{{ ticket.issue }}</p>
+        <p>{{ ticket.openedBy }}</p>
+        <p>{{ ticket.date }}</p>
+        <p>{{ ticket.status }}</p>
+        <p>{{ ticket.resolvedBy }}</p>
+        <p>{{ ticket.resolution }}</p>
+	</div>
+} @else {
+	<div>
+		<h2>checking out book...</h2>
+	</div>
+}
+
