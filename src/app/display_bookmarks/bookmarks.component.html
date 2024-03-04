@@ -12,7 +12,7 @@
 		  <tr>
 			<td>{{ bookmark.ticketId }}</td>
 			<td>{{ bookmark.markedBy }}</td>
-			<td>{{ bookmark.markedDate }}</td>
+			<td>{{ bookmark.markedDate | date: 'medium'}}</td>
 		  </tr>
 		}
 	  </tbody>
