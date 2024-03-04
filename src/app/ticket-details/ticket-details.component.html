@@ -6,7 +6,12 @@
         <p>Issue: {{ ticket.issue }}</p>
         <p>Opened By:{{ ticket.openedBy }}</p>
         <p>Date: {{ ticket.date }}</p>
-        <p>Status: {{ ticket.status }}</p>
+        <p>Status: @if (ticket.status){
+                Resolved
+                }
+                @else {
+                Open
+                }</p>
         <p>Resolved By: {{ ticket.resolvedBy }}</p>
         <p>Resolution: {{ ticket.resolution }}</p>
 	</div>

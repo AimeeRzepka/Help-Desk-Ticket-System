@@ -19,16 +19,16 @@
 		  <tr>
 			<td>{{ ticket.id }}</td>
 			<td>{{ ticket.issue }}</td>
-			
-			
 			<td>{{ ticket.date | date: 'medium' }}</td>
-			<td>{{ ticket.status }}</td>
-			
-		
-
-
+			<td> @if (ticket.status){
+			Resolved
+			}
+			@else {
+			Open
+			}
+			</td>			
 			<td>
-				<!-- this component exist inside of a router outlet,
+				<!-- this component exists inside of a router outlet,
 				if you decide to use the routerLink directive, you will,
 				you will be default be using a subroute, ie, it will ALWAYS
 				include book/ first because THIS COMPONENT already 
