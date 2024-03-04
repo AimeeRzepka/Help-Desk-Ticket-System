@@ -1,16 +1,19 @@
 @if (ticket !== null) {
+
 	<div>
-        <p>{{ ticket.id }}</p>
-        <p>{{ ticket.issue }}</p>
-        <p>{{ ticket.openedBy }}</p>
-        <p>{{ ticket.date }}</p>
-        <p>{{ ticket.status }}</p>
-        <p>{{ ticket.resolvedBy }}</p>
-        <p>{{ ticket.resolution }}</p>
+                
+        <h1>Ticket # {{ ticket.id }}</h1>
+        <p>Issue: {{ ticket.issue }}</p>
+        <p>Opened By:{{ ticket.openedBy }}</p>
+        <p>Date: {{ ticket.date }}</p>
+        <p>Status: {{ ticket.status }}</p>
+        <p>Resolved By: {{ ticket.resolvedBy }}</p>
+        <p>Resolution: {{ ticket.resolution }}</p>
 	</div>
+
+        
 } @else {
 	<div>
 		<h2>Loading...</h2>
 	</div>
 }
-

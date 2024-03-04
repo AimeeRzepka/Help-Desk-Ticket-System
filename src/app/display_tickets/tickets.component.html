@@ -7,23 +7,24 @@
 		<tr>
 		  <th>Ticket</th>
 		  <th>Issue</th>
-		  <th>OpenedBy</th>
 		  <th>Date</th>
           <th>Status</th>
-          <th>ResolvedBy</th>
-          <th>Resolution</th>
+       
 		</tr>
 	  </thead>
+	  <tbody>
+	  <tbody>
 	  <tbody>
 		@for (ticket of tickets; track ticket.id) {
 		  <tr>
 			<td>{{ ticket.id }}</td>
 			<td>{{ ticket.issue }}</td>
-			<td>{{ ticket.openedBy }}</td>
+			
+			
 			<td>{{ ticket.date }}</td>
 			<td>{{ ticket.status }}</td>
-			<td>{{ ticket.resolvedBy }}</td>
-			<td>{{ ticket.resolution }}</td>
+			
+		
 
 
 			<td>
