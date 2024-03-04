@@ -1,11 +1,48 @@
 nav {
-    padding-left: 1rem;
-    display: flex;
-    gap: 1rem;
-  }
-  
+  display: flex;
+  gap: 5rem;
+  padding-left: 1rem;
+  padding-top: 0.5rem;
+  padding-bottom: 0.5rem;
+  background-color: #c355f5;
+  text-align: center;
+
   a {
-    cursor: pointer;
     text-decoration: underline;
+    color: #3d3551;
+    cursor: pointer;
+    font-family: "Georgia", sans-serif;
+    font-size: 3rem;
+    ;
+
+
+    &:visted {
+      color: rgb(201, 28, 201);
+    }
+
+    &:hover {
+      color: #f1fa3c
+    }
   }
+}
+
+main {
+  width: 100vw;
+  height: 96vh;
+  background-color: #3d3551;
+  padding-top: 1rem;
+  font-size: .25rem;
+  text-align: center;
+}
+
+h1 {
+  color:#3d3551;
+  font-style: italic;
+  font-family: Georgia, 'Times New Roman', Times, serif;
+  text-align: right;
+  padding-left: 25rem;
+  padding-top: 3rem;
+  font-size: 1rem;
+  ;
+}
   

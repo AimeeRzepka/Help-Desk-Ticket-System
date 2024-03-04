@@ -1,24 +1,53 @@
 :host {
     display: flex;
     flex-direction: column;
-    align-items: center;
+    align-items: left;
     justify-content: center;
     height: 100%;
     width: 100%;
-    background-color: #f5f5f5;
-    font-family: "Roboto", sans-serif;
-    color: #333;
+    background-color: #3d3551;
+    font-family: "Courier New", monospace;
+    color: #f1fa3c;
     font-size: 1rem;
-    line-height: 1.5;
-    padding: 1rem;
+    line-height: 2.5;
+    padding: 1rem
+    
   }
-  
+
+
+td:nth-child(7) {
+  width: 175px;
+}
+
+
   button {
     padding-left: 1rem;
     padding-right: 1rem;
     padding-top: 0.5rem;
     padding-bottom: 0.5rem;
     border-radius: 0.25rem;
-    background-color: white;
+    background-color: #c355f5;
     cursor: pointer;
+    font-family: 'Courier New', Courier, monospace;
+
+    
   }
+
+  a {
+    text-decoration: underline;
+    color: #c355f5;
+    cursor: pointer;
+    font-family: "Courier New", monospace;
+    font-size: 2rem;
+    align-items: center;
+
+
+    &:visted {
+      color: rgb(201, 28, 201);
+    }
+
+    &:hover {
+      color: #f1fa3c
+    }
+  }
+
